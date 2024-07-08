@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find my post</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .post {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 60px 400px;
+        }
+
+        .post__content,
+        .post__comment {
+            border-width: 2px;
+            border-color: black;
+            border-style: solid;
+            padding: 50px;
+        }
+
+        .post__search {
+            width: 300px;
+            padding: 10px;
+            border-radius: 10px
+        }
+
+        .post__button,
+        .comment__button
+         {
+            width: 170px;
+            border-radius: 20px;
+            padding: 6px;
+            background-color: greenyellow;
+            border: none;
+            margin: auto;
+        }
+
+        .post__error {
+            color: red;
+            display: none;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Search for a post by id</h1>
+    <div class="post">
+        <label for="post_id">Search post</label>
+        <input class="post__search" id="post_id" type="number" placeholder="Enter a number from 1 to 100">
+        <span id="errorMessage" class="post__error"></span>
+        <button class="post__button">Search</button>
+        <div class="post__content">
+        </div>
+        <button class="comment__button">Show comments</button>
+        <div class="post__comment"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
