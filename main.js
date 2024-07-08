@@ -52,9 +52,9 @@ searchButton.addEventListener("click", async () => {
         if(post) {
             postField.innerHTML = `
                 <h2>User Id: ${post.userId}</h2>
-                <p><strong>Post Id: </strong>${post.id}</p>
-                <p><strong>Title: </strong>${post.title}</p>
-                <p><strong>Contents: </strong>${post.body}</p>
+                <p><span class="post__info">Post Id: </span>${post.id}</p>
+                <p><span class="post__info">Title: </span>${post.title}</p>
+                <p><span class="post__info">Contents: </span>${post.body}</p>
             `
         } else {
             postField.innerHTML = "<p>Cannot fetch the post, please try again later</p>"
@@ -85,10 +85,10 @@ showCommentsButton.addEventListener("click", async () => {
         filteredComments.forEach(comment => {
             postCommentField.innerHTML += `
                 <h2>Poist Id: ${comment.postId}</h2>
-                <p><strong>Commentar Id: </strong>${comment.id}</p>
-                <p><strong>Comment Author Name: </strong>${comment.name}</p>
-                <p><strong>Comment Author Name: </strong>${comment.email}</p>
-                <p><strong>Comment: </strong>${comment.body}</p>
+                <p><span class="post__info">Commentar Id: </span>${comment.id}</p>
+                <p><span class="post__info">Comment Author Name: </span>${comment.name}</p>
+                <p><span class="post__info">Comment Author Name: </span>${comment.email}</p>
+                <p><span class="post__info">Comment: </span>${comment.body}</p>
             `
         })  
     }else {
